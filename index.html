@@ -19,6 +19,53 @@
             color: #fff;
         }
 
+        /* Sticky Header */
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            padding: 12px 20px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .top-header a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .top-header a:hover {
+            border-color: white;
+        }
+
+        .header-booking {
+            background: white;
+            color: black !important;
+            font-weight: 700;
+        }
+
+        .header-booking:hover {
+            background: #ccc;
+        }
+
+        /* Background */
         .background {
             position: fixed;
             top: 0;
@@ -31,6 +78,7 @@
             z-index: -2;
         }
 
+        /* Page content */
         .overlay {
             width: 100%;
             min-height: 100vh;
@@ -38,17 +86,18 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding: 60px 20px;
+            padding: 140px 20px 60px; /* Extra top padding så header ej täcker */
             text-align: center;
             position: relative;
         }
 
-        /* Full-bredd bild */
+        /* Full-width main image */
         .main-img {
             width: 100%;
-            max-width: none;
             height: auto;
+            max-width: none;
             margin-bottom: 40px;
+            display: block;
         }
 
         .tagline {
@@ -116,24 +165,23 @@
 </head>
 
 <body>
+
+    <!-- Sticky Header -->
     <header class="top-header">
-    <div class="header-content">
-        <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
-        <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
-        <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
-
-        <a class="header-booking" href="mailto:Booking@Radera.dj">BOOKING</a>
-    </div>
-</header>
-
+        <div class="header-content">
+            <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
+            <a class="header-booking" href="mailto:Booking@Radera.dj">BOOKING</a>
+        </div>
+    </header>
 
     <div class="background"></div>
 
     <div class="overlay">
 
-        <!-- Stor toppbild -->
-        <img src="storbilde.jpg" alt="DJ-bild" class="main-img">
+        <img src="storbilde.png" alt="DJ-bild" class="main-img">
 
         <div class="tagline">HARDEST ACT IN SWEDEN</div>
 
@@ -153,6 +201,7 @@
         </div>
 
         <a class="booking-btn" href="mailto:Booking@Radera.dj">BOOKING</a>
+
     </div>
 
 </body>

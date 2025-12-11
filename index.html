@@ -19,7 +19,6 @@
             color: #fff;
         }
 
-        /* Fullskärms bakgrund med blur */
         .background {
             position: fixed;
             top: 0;
@@ -29,8 +28,7 @@
             background-image: url("background.jpg");
             background-size: cover;
             background-position: center;
-            filter: none;
-            z-index: -2; /* ligger bakom allt */
+            z-index: -2;
         }
 
         .overlay {
@@ -45,12 +43,12 @@
             position: relative;
         }
 
-        /* Logotyp */
-        .logo {
-            max-width: 400px;
-            width: 80%;
+        /* Full-bredd bild */
+        .main-img {
+            width: 100%;
+            max-width: none;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .tagline {
@@ -60,15 +58,6 @@
             margin-bottom: 40px;
         }
 
-        /* Stor PNG bild under texten */
-        .main-img {
-            width: 80%;
-            max-width: 1200px;
-            height: auto;
-            margin-bottom: 40px;
-        }
-
-        /* Bio-text under bilden */
         .bio-text {
             width: 80%;
             max-width: 1000px;
@@ -119,9 +108,7 @@
         }
 
         @media (max-width: 600px) {
-            .logo { width: 95%; max-width: 300px; }
             .tagline { font-size: 18px; }
-            .main-img { width: 95%; }
             .socials a { font-size: 18px; }
             .bio-text { font-size: 14px; }
         }
@@ -130,32 +117,23 @@
 
 <body>
 
-    <!-- suddad bakgrund -->
     <div class="background"></div>
 
-    <!-- innehållet -->
     <div class="overlay">
 
-        <!-- Logotyp -->
-        <img src="logovit2.png" alt="Radera logotyp" class="logo">
-
-        <!-- Tagline -->
-        <div class="tagline">HARDEST ACT IN SWEDEN</div>
-
-        <!-- Stor PNG bild -->
+        <!-- Stor toppbild -->
         <img src="storbilde.png" alt="DJ-bild" class="main-img">
 
-        <!-- Bio-text -->
+        <div class="tagline">HARDEST ACT IN SWEDEN</div>
+
         <div class="bio-text">
             <p>Radera has truly taken the harddance scene by storm.”</p>
 
             <p>With the viral hit "ON AND ON AND ON," he has proven himself to be one of the most exciting new artists right now.</p>
 
             <p>He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark..</p>
-
         </div>
 
-        <!-- Sociala medier -->
         <div class="socials">
             <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
             <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
@@ -163,7 +141,6 @@
             <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
         </div>
 
-        <!-- Booking-knapp -->
         <a class="booking-btn" href="mailto:Booking@Radera.dj">BOOKING</a>
     </div>
 

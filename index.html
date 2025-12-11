@@ -86,7 +86,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding: 140px 20px 60px; /* Extra top padding så header ej täcker */
+            padding: 140px 20px 60px;
             text-align: center;
             position: relative;
         }
@@ -117,6 +117,7 @@
             margin-bottom: 40px;
         }
 
+        /* Social media icons */
         .socials {
             display: flex;
             gap: 20px;
@@ -126,10 +127,10 @@
         }
 
         .socials a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            padding: 10px 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
             border: 1px solid #555;
             border-radius: 8px;
             transition: 0.3s ease;
@@ -137,7 +138,12 @@
 
         .socials a:hover {
             background: white;
-            color: black;
+        }
+
+        .socials img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
 
         .booking-btn {
@@ -158,7 +164,6 @@
 
         @media (max-width: 600px) {
             .tagline { font-size: 18px; }
-            .socials a { font-size: 18px; }
             .bio-text { font-size: 14px; }
         }
     </style>
@@ -193,20 +198,21 @@
             <p>He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark..</p>
         </div>
 
- <div class="socials">
-    <a href="https://www.instagram.com/raderaofficial/" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-    </a>
-    <a href="https://www.tiktok.com/@raderaofficial" target="_blank">
-        <img src="tiktok.png" alt="TikTok">
-    </a>
-    <a href="https://www.youtube.com/@Radera" target="_blank">
-        <img src="youtube.png" alt="YouTube">
-    </a>
-    <a href="https://www.facebook.com/RaderaOfficial" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-    </a>
-</div>
+        <!-- SOCIAL ICONS -->
+        <div class="socials">
+            <a href="https://www.instagram.com/raderaofficial/" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@raderaofficial" target="_blank">
+                <img src="tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://www.youtube.com/@Radera" target="_blank">
+                <img src="youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.facebook.com/RaderaOfficial" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+        </div>
 
         <a class="booking-btn" href="mailto:Booking@Radera.dj">BOOKING</a>
 

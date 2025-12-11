@@ -1,113 +1,39 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Radera – DJ & Artist</title>
 
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background: #0D0D0D;
-            color: white;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: #000;
+            overflow-x: hidden;
+            color: #fff;
         }
 
-        .container {
-            max-width: 900px;
-            width: 90%;
-            text-align: center;
-            margin-top: 60px;
+        /* Fullskärms bakgrund med blur */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px) brightness(0.4);
+            z-index: -1;
         }
 
-        h1 {
-            font-size: 48px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .profile-img {
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 35px;
-            border: 3px solid #333;
-        }
-
-        .socials {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .socials a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            padding: 8px 18px;
-            border: 1px solid #444;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .socials a:hover {
-            background: white;
-            color: black;
-        }
-
-        .booking-btn {
-            margin-top: 50px;
-            display: inline-block;
-            padding: 15px 30px;
-            background: #ffffff;
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .booking-btn:hover {
-            background: #cccccc;
-        }
-
-        p {
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-            font-size: 18px;
-            opacity: 0.85;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-
-        <h1>RADERA</h1>
-
-        <!-- Byt ut radera.jpg mot din faktiska bild -->
-        <img src="radera.jpg" alt="Radera" class="profile-img">
-
-        <p>DJ & Artist</p>
-
-        <div class="socials">
-            <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
-            <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
-            <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
-        </div>
-
-        <a class="booking-btn" href="mailto:Booking@Radera.dj">BOKA MIG</a>
-    </div>
-</body>
-</html>
+        .overlay {
+            width: 100%;
+            min-height: 100vh;
+            display: fl

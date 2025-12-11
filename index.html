@@ -38,33 +38,19 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
             position: relative;
         }
 
-        /* Stor PNG i overlay */
-        .main-img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        /* Logotyp istället för text */
+        .logo {
+            max-width: 400px;
             width: 80%;
-            max-width: 1200px;
             height: auto;
-            opacity: 0.6; /* kan justeras */
-            z-index: -1; /* bakom texten */
-        }
-
-        h1 {
-            font-size: 60px;
-            letter-spacing: 3px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            z-index: 1;
-            position: relative;
+            margin-bottom: 20px;
         }
 
         .tagline {
@@ -72,8 +58,14 @@
             font-weight: 300;
             opacity: 0.9;
             margin-bottom: 40px;
-            z-index: 1;
-            position: relative;
+        }
+
+        /* Stor PNG bild under texten */
+        .main-img {
+            width: 80%;
+            max-width: 1200px;
+            height: auto;
+            margin-bottom: 40px;
         }
 
         .socials {
@@ -82,8 +74,6 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 45px;
-            z-index: 1;
-            position: relative;
         }
 
         .socials a {
@@ -111,8 +101,6 @@
             border-radius: 8px;
             text-decoration: none;
             transition: 0.3s ease;
-            z-index: 1;
-            position: relative;
         }
 
         .booking-btn:hover {
@@ -120,7 +108,7 @@
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 42px; }
+            .logo { width: 95%; max-width: 300px; }
             .tagline { font-size: 18px; }
             .socials a { font-size: 18px; }
             .main-img { width: 95%; }
@@ -136,12 +124,16 @@
     <!-- innehållet -->
     <div class="overlay">
 
+        <!-- Logotyp -->
+        <img src="logovit.png" alt="Radera logotyp" class="logo">
+
+        <!-- Tagline -->
+        <div class="tagline">HARDEST ACT IN SWEDEN</div>
+
         <!-- Stor PNG bild -->
         <img src="storbilde.png" alt="DJ-bild" class="main-img">
 
-        <h1>RADERA</h1>
-        <div class="tagline">HARDEST ACT IN SWEDEN</div>
-
+        <!-- Sociala medier -->
         <div class="socials">
             <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
             <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
@@ -149,6 +141,7 @@
             <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
         </div>
 
+        <!-- Booking-knapp -->
         <a class="booking-btn" href="mailto:Booking@Radera.dj">BOOKING</a>
     </div>
 

@@ -19,13 +19,15 @@
             overflow-x: hidden;
         }
 
-        
         /* Sticky Header */
         .top-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(6px);
             padding: 12px 20px;
@@ -33,15 +35,23 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
-        .header-content {
+        .header-left {
+            flex: 0 0 auto;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        .header-center {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 25px;
-            flex-wrap: wrap;
+            flex: 1;
         }
 
-        .top-header a {
+        .header-center a {
             color: white;
             text-decoration: none;
             font-size: 16px;
@@ -52,7 +62,7 @@
             border: 1px solid transparent;
         }
 
-        .top-header a:hover {
+        .header-center a:hover {
             border-color: white;
         }
 
@@ -80,42 +90,14 @@
             z-index: -1;
         }
 
-        /* Header */
-        header {
-            width: 100%;
-            padding: 20px 40px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-            font-size: 22px;
-            padding: 10px 20px;
-            border: 1px solid #555;
-            border-radius: 8px;
-            transition: 0.3s ease;
-        }
-
-        header a:hover {
-            background: white;
-            color: black;
-        }
-
         /* Main content */
         .content {
             max-width: 1400px;
-            margin: 120px auto 0 auto; /* push content below header */
+            margin: 120px auto 0 auto;
             padding: 40px 20px;
         }
 
-        /* Loggan */
+        /* Loggan i content */
         .logo {
             width: 300px;
             display: block;
@@ -133,7 +115,7 @@
         /* Två kolumner */
         .columns {
             display: flex;
-            gap: 120px; /* större gap åt höger */
+            gap: 120px;
             justify-content: space-between;
             align-items: flex-start;
         }
@@ -189,8 +171,9 @@
             .logo {
                 width: 220px;
             }
-            header {
-                padding: 15px 20px;
+            .top-header {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -200,22 +183,22 @@
 
     <div class="background"></div>
 
-    <!-- Header med START-länk -->
-  <header class="top-header">
-    <div class="header-content">
-
-        <a href="index.html">START</a>
-
-        <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
-        <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
-        <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
-
-        <a class="header-booking" href="booking.html">BOOKING</a>
-
-    </div>
-</header>
-
+    <!-- Header med logga till vänster och länkar centrerade -->
+    <header class="top-header">
+        <div class="header-left">
+            <a href="index.html">
+                <img src="logovit2.png" alt="Logo" class="header-logo">
+            </a>
+        </div>
+        <div class="header-center">
+            <a href="index.html">Hem</a>
+            <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
+            <a class="header-booking" href="booking.html">BOOKING</a>
+        </div>
+    </header>
 
     <div class="content">
 

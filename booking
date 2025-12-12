@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking – Radera</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .booking-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: white;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .booking-btn:hover {
+            background: #cfcfcf;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Booking</h1>
+
+    <p>
+        For all professional booking inquiries, please contact us via email.
+        We handle club shows, festival bookings, private events, and international dates.
+    </p>
+
+    <a class="booking-btn" href="mailto:Booking@Radera.dj">Send Email</a>
+
+</body>
+</html>

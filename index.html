@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Radera – DJ & Artist</title>
+<title>Radera – Official website</title>
 
 <style>
     * {
@@ -15,8 +15,8 @@
     body {
         font-family: Arial, Helvetica, sans-serif;
         background: #000;
-        overflow-x: hidden;
         color: #fff;
+        overflow-x: hidden;
     }
 
     /* Sticky Header */
@@ -49,6 +49,7 @@
         align-items: center;
         gap: 25px;
         flex: 1;
+        flex-wrap: wrap;
     }
 
     .header-center a {
@@ -90,7 +91,7 @@
         z-index: -1;
     }
 
-    /* Page content */
+    /* Main content overlay */
     .overlay {
         width: 100%;
         min-height: 100vh;
@@ -107,8 +108,8 @@
         width: 100%;
         height: auto;
         max-width: none;
-        margin-bottom: 40px;
         display: block;
+        margin-bottom: 40px;
     }
 
     .tagline {
@@ -126,6 +127,47 @@
         line-height: 1.6;
         text-align: left;
         margin-bottom: 40px;
+    }
+
+    /* Social media icons + booking */
+    .socials {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 60px;
+        align-items: center;
+    }
+
+    .socials a {
+        display: inline-block;
+        padding: 0;
+        border: none;
+        background: none;
+        transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+        transform: scale(1.1);
+    }
+
+    .socials img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .booking-btn img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+        transition: 0.3s ease;
+    }
+
+    .booking-btn img:hover {
+        transform: scale(1.1);
     }
 
     @media (max-width: 900px) {
@@ -155,7 +197,7 @@
         </a>
     </div>
     <div class="header-center">
-        <a href="index.html">Hem</a>
+        <a href="index.html">Home</a>
         <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
         <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
@@ -173,9 +215,10 @@
     <div class="tagline">HARDEST ACT IN SWEDEN</div>
 
     <div class="bio-text">
-        <p>Radera has truly taken the harddance scene by storm.”</p>
-        <p>With the viral hit "ON AND ON AND ON," he has proven himself to be one of the most exciting new artists right now.</p>
-        <p>He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark.</p>
+<p>Are you ready for Sweden's most intense Hardstyle experience?</p>
+<p>Radera is one of the biggest names in the Swedish Hardstyle scene, and he's rapidly gaining international recognition.</p>
+<p>From Rawstyle to Uptempo, with 100% energy, Radera is taking over the world of Hardstyle!</p>
+
     </div>
 
     <div style="max-width: 600px; margin: 0 auto 20px;">
@@ -185,6 +228,25 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy">
         </iframe>
+    </div>
+
+    <!-- Socials + booking -->
+    <div class="socials">
+        <a href="https://www.instagram.com/raderaofficial/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@raderaofficial" target="_blank">
+            <img src="tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://www.youtube.com/@Radera" target="_blank">
+            <img src="youtube.png" alt="YouTube">
+        </a>
+        <a href="https://www.facebook.com/RaderaOfficial" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a class="booking-btn" href="mailto:Booking@Radera.dj">
+            <img src="booking.png" alt="Booking">
+        </a>
     </div>
 
 </div>

@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
 
-        /* Bakgrundsbild */
+        /* Bakgrund */
         .background {
             position: fixed;
             top: 0;
@@ -33,13 +33,42 @@
             z-index: -1;
         }
 
+        /* Header */
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            padding: 10px 20px;
+            border: 1px solid #555;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        header a:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Main content */
         .content {
-            max-width: 1300px;
-            margin: 0 auto;
+            max-width: 1400px;
+            margin: 120px auto 0 auto; /* push content below header */
             padding: 40px 20px;
         }
 
-        /* Centrerad logga */
+        /* Loggan */
         .logo {
             width: 300px;
             display: block;
@@ -57,12 +86,15 @@
         /* Två kolumner */
         .columns {
             display: flex;
-            gap: 50px;
+            gap: 120px; /* större gap åt höger */
             justify-content: space-between;
             align-items: flex-start;
         }
 
-        .left,
+        .left {
+            flex: 2;
+        }
+
         .right {
             flex: 1;
         }
@@ -82,6 +114,7 @@
         .right p {
             line-height: 1.5;
             opacity: 0.9;
+            margin-bottom: 15px;
         }
 
         .contact-btn {
@@ -104,9 +137,13 @@
         @media (max-width: 900px) {
             .columns {
                 flex-direction: column;
+                gap: 40px;
             }
             .logo {
                 width: 220px;
+            }
+            header {
+                padding: 15px 20px;
             }
         }
     </style>
@@ -115,6 +152,11 @@
 <body>
 
     <div class="background"></div>
+
+    <!-- Header med START-länk -->
+    <header>
+        <a href="index.html">START</a>
+    </header>
 
     <div class="content">
 
@@ -127,12 +169,12 @@
             <!-- Vänster kolumn -->
             <div class="left">
                 <p>
-                Radera has truly taken the harddance scene by storm. With the viral hit "ON AND ON AND ON," he has 
-                proven himself to be one of the most exciting new artists right now.
+                Radera has truly taken the harddance scene by storm. With the viral hit "ON AND ON AND ON,"
+                he has proven himself to be one of the most exciting new artists right now.
                 </p>
 
                 <p>
-                He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has 
+                He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has
                 made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark.
                 </p>
             </div>
@@ -149,7 +191,7 @@
                 </p>
 
                 <p>
-                    E: booking@radera.dj<br>
+                    E: booking@radera.dj
                 </p>
 
                 <a href="mailto:booking@radera.dj" class="contact-btn">Send Email</a>

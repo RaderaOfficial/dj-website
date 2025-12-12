@@ -30,6 +30,13 @@
             padding: 12px 20px;
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo img {
+            height: 40px;
         }
 
         .header-content {
@@ -86,7 +93,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            padding: 140px 20px 60px;
+            padding: 80px 20px 60px; /* Mindre top-padding för att flytta upp bilden */
             text-align: center;
             position: relative;
         }
@@ -123,7 +130,7 @@
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 45px;
+            margin-bottom: 60px; /* Lite mer mellanrum från Spotify */
         }
 
         .socials a {
@@ -145,20 +152,16 @@
             display: block;
         }
 
-        .booking-btn {
-            display: inline-block;
-            padding: 16px 30px;
-            background: white;
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
+        .booking-btn img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            display: block;
             transition: 0.3s ease;
         }
 
-        .booking-btn:hover {
-            background: #cfcfcf;
+        .booking-btn img:hover {
+            transform: scale(1.1);
         }
 
         @media (max-width: 600px) {
@@ -171,21 +174,18 @@
 <body>
 
     <!-- Sticky Header -->
-<header class="top-header">
-    <div class="header-content">
-
-        <a href="index.html">START</a>
-
-        <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
-        <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
-        <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
-
-        <a class="header-booking" href="booking.html">BOOKING</a>
-
-    </div>
-</header>
-
+    <header class="top-header">
+        <div class="header-logo">
+            <a href="index.html"><img src="logovit2.png" alt="Logo"></a>
+        </div>
+        <div class="header-content">
+            <a href="index.html">START</a>
+            <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
+        </div>
+    </header>
 
     <div class="background"></div>
 
@@ -197,20 +197,18 @@
 
         <div class="bio-text">
             <p>Radera has truly taken the harddance scene by storm.”</p>
-
             <p>With the viral hit "ON AND ON AND ON," he has proven himself to be one of the most exciting new artists right now.</p>
-
             <p>He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark..</p>
         </div>
-<div style="max-width: 600px; margin: 0 auto;">
-    <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/playlist/7iwQdWc0OmE43tEJOBHQKe?utm_source=generator"
-        width="100%" height="352" frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-    </iframe>
-</div>
 
+        <div style="max-width: 600px; margin: 0 auto 20px;">
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/7iwQdWc0OmE43tEJOBHQKe?utm_source=generator"
+                width="100%" height="352" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
 
         <!-- SOCIAL ICONS WITHOUT BOX -->
         <div class="socials">
@@ -228,7 +226,9 @@
             </a>
         </div>
 
-        <a class="booking-btn" href="mailto:Booking@Radera.dj">BOOKING</a>
+        <a class="booking-btn" href="mailto:Booking@Radera.dj">
+            <img src="booking.png" alt="Booking">
+        </a>
 
     </div>
 

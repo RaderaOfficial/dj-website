@@ -16,51 +16,148 @@
             font-family: Arial, Helvetica, sans-serif;
             background: #000;
             color: #fff;
-            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Bakgrundsbild */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(6px) brightness(0.4);
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 1300px;
+            margin: 0 auto;
             padding: 40px 20px;
         }
 
+        /* Centrerad logga */
+        .logo {
+            width: 300px;
+            display: block;
+            margin: 0 auto 40px auto;
+        }
+
         h1 {
+            text-align: center;
             font-size: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
 
-        p {
-            font-size: 20px;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 40px;
+        /* Två kolumner */
+        .columns {
+            display: flex;
+            gap: 50px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .left,
+        .right {
+            flex: 1;
+        }
+
+        .left p {
+            font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.95;
         }
 
-        .booking-btn {
+        .right h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .right p {
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .contact-btn {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 14px 26px;
             background: white;
             color: black;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             border-radius: 8px;
             text-decoration: none;
+            margin-top: 20px;
             transition: 0.3s ease;
         }
 
-        .booking-btn:hover {
+        .contact-btn:hover {
             background: #cfcfcf;
+        }
+
+        @media (max-width: 900px) {
+            .columns {
+                flex-direction: column;
+            }
+            .logo {
+                width: 220px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Booking</h1>
+    <div class="background"></div>
 
-    <p>
-        For all professional booking inquiries, please contact us via email.
-        We handle club shows, festival bookings, private events, and international dates.
-    </p>
+    <div class="content">
 
-    <a class="booking-btn" href="mailto:Booking@Radera.dj">Send Email</a>
+        <img src="logovit2.png" class="logo" alt="Logo">
+
+        <h1>BOOKING</h1>
+
+        <div class="columns">
+
+            <!-- Vänster kolumn -->
+            <div class="left">
+                <p>
+                Radera has truly taken the harddance scene by storm. With the viral hit "ON AND ON AND ON," he has 
+                proven himself to be one of the most exciting new artists right now.
+                </p>
+
+                <p>
+                He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has 
+                made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark.
+                </p>
+            </div>
+
+            <!-- Höger kolumn -->
+            <div class="right">
+                <h3>Contact details</h3>
+
+                <p>
+                    Radera Management<br>
+                    Example Street 12<br>
+                    111 22 Stockholm<br>
+                    Sweden
+                </p>
+
+                <p>
+                    E: booking@radera.dj<br>
+                </p>
+
+                <a href="mailto:booking@radera.dj" class="contact-btn">Send Email</a>
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>

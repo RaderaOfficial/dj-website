@@ -77,11 +77,19 @@
         background: #ccc;
     }
 
-    /* FORCE REMOVE any background artifacts from social icons */
+    /* HEADER SOCIAL ICONS FIX */
+    .header-right {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
     .header-right img {
         background: transparent !important;
-        filter: none !important;
         display: block;
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
     }
 
     /* Background */
@@ -114,12 +122,11 @@
     .main-img {
         width: 100%;
         height: auto;
-        max-width: none;
         display: block;
         margin-bottom: 40px;
     }
 
-    /* Bigger tagline text */
+    /* Bigger tagline */
     .tagline {
         font-size: 48px;
         font-weight: 900;
@@ -138,7 +145,7 @@
         margin-bottom: 40px;
     }
 
-    /* Social media icons + booking */
+    /* Social media icons bottom section */
     .socials {
         display: flex;
         gap: 20px;
@@ -148,34 +155,15 @@
         align-items: center;
     }
 
-    .socials a {
-        display: inline-block;
-        padding: 0;
-        border: none;
-        background: none;
-        transition: 0.3s ease;
-    }
-
-    .socials a:hover {
-        transform: scale(1.1);
-    }
-
     .socials img {
         width: 32px;
         height: 32px;
         object-fit: contain;
         display: block;
-    }
-
-    .booking-btn img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        display: block;
         transition: 0.3s ease;
     }
 
-    .booking-btn img:hover {
+    .socials a:hover img {
         transform: scale(1.1);
     }
 
@@ -229,7 +217,6 @@
     </div>
 </header>
 
-
 <div class="background"></div>
 
 <div class="overlay">
@@ -253,7 +240,7 @@
         </iframe>
     </div>
 
-    <!-- Socials + booking -->
+    <!-- Socials bottom -->
     <div class="socials">
         <a href="https://www.instagram.com/raderaofficial/" target="_blank">
             <img src="instagram.png" alt="Instagram">

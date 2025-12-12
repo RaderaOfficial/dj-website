@@ -25,35 +25,33 @@
         top: 0;
         left: 0;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background: rgba(0, 0, 0, 0.75);
         backdrop-filter: blur(6px);
         padding: 12px 20px;
         z-index: 1000;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
-    .header-logo img {
-        height: 40px;
+    .header-left {
+        flex: 0 0 auto;
     }
 
-    .header-content-wrapper {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+    .header-logo {
+        height: 50px;
     }
 
-    .header-content {
+    .header-center {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 25px;
-        flex-wrap: wrap;
+        flex: 1;
     }
 
-    .top-header a {
+    .header-center a {
         color: white;
         text-decoration: none;
         font-size: 16px;
@@ -64,8 +62,18 @@
         border: 1px solid transparent;
     }
 
-    .top-header a:hover {
+    .header-center a:hover {
         border-color: white;
+    }
+
+    .header-booking {
+        background: white;
+        color: black !important;
+        font-weight: 700;
+    }
+
+    .header-booking:hover {
+        background: #ccc;
     }
 
     /* Background */
@@ -78,7 +86,8 @@
         background-image: url("background.jpg");
         background-size: cover;
         background-position: center;
-        z-index: -2;
+        filter: blur(6px) brightness(0.4);
+        z-index: -1;
     }
 
     /* Page content */
@@ -89,12 +98,11 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 80px 20px 60px;
+        padding: 120px 20px 60px;
         text-align: center;
         position: relative;
     }
 
-    /* Full-width main image */
     .main-img {
         width: 100%;
         height: auto;
@@ -120,45 +128,14 @@
         margin-bottom: 40px;
     }
 
-    /* Social media icons */
-    .socials {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 60px;
-        align-items: center;
-    }
-
-    .socials a {
-        display: inline-block;
-        padding: 0;
-        border: none;
-        background: none;
-        transition: 0.3s ease;
-    }
-
-    .socials a:hover {
-        transform: scale(1.1);
-    }
-
-    .socials img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        display: block;
-    }
-
-    .booking-btn img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        display: block;
-        transition: 0.3s ease;
-    }
-
-    .booking-btn img:hover {
-        transform: scale(1.1);
+    @media (max-width: 900px) {
+        .top-header {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .header-logo {
+            height: 40px;
+        }
     }
 
     @media (max-width: 600px) {
@@ -170,20 +147,20 @@
 
 <body>
 
-<!-- Sticky Header -->
+<!-- Header -->
 <header class="top-header">
-    <div class="header-logo">
-        <a href="index.html"><img src="logovit2.png" alt="Logo"></a>
+    <div class="header-left">
+        <a href="index.html">
+            <img src="logovit2.png" alt="Logo" class="header-logo">
+        </a>
     </div>
-    <div class="header-content-wrapper">
-        <div class="header-content">
-            <a href="index.html">Home</a>
-            <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
-            <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
-            <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
-            <a href="booking.html">Booking</a>
-        </div>
+    <div class="header-center">
+        <a href="index.html">Hem</a>
+        <a href="https://www.instagram.com/raderaofficial/" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@raderaofficial" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@Radera" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/RaderaOfficial" target="_blank">Facebook</a>
+        <a class="header-booking" href="booking.html">BOOKING</a>
     </div>
 </header>
 
@@ -198,7 +175,7 @@
     <div class="bio-text">
         <p>Radera has truly taken the harddance scene by storm.”</p>
         <p>With the viral hit "ON AND ON AND ON," he has proven himself to be one of the most exciting new artists right now.</p>
-        <p>He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark..</p>
+        <p>He has already performed on major stages such as Sana Duri, Summerburst, and DNA Outdoor, and has made impressive debuts in the Netherlands, Germany, Poland, Norway, and Denmark.</p>
     </div>
 
     <div style="max-width: 600px; margin: 0 auto 20px;">
@@ -208,25 +185,6 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy">
         </iframe>
-    </div>
-
-    <!-- Socials + Booking on same row -->
-    <div class="socials">
-        <a href="https://www.instagram.com/raderaofficial/" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/@raderaofficial" target="_blank">
-            <img src="tiktok.png" alt="TikTok">
-        </a>
-        <a href="https://www.youtube.com/@Radera" target="_blank">
-            <img src="youtube.png" alt="YouTube">
-        </a>
-        <a href="https://www.facebook.com/RaderaOfficial" target="_blank">
-            <img src="facebook.png" alt="Facebook">
-        </a>
-        <a class="booking-btn" href="mailto:Booking@Radera.dj">
-            <img src="booking.png" alt="Booking">
-        </a>
     </div>
 
 </div>

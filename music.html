@@ -3,162 +3,184 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Radera – Music</title>
+<title>Radera – Official website</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #000;
-    color: #fff;
-    overflow-x: hidden;
-}
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+    }
 
-/* Sticky Header */
-.top-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(6px);
-    padding: 12px 20px;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.header-left {
-    flex: 0 0 auto;
-}
-
-.header-logo {
-    height: 50px;
-}
-
-.header-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex: 1;
-    flex-wrap: wrap;
-}
-
-.header-center a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 8px 14px;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    border: 1px solid transparent;
-}
-
-.header-center a:hover {
-    border-color: white;
-}
-
-.header-booking {
-    background: white;
-    color: black !important;
-    font-weight: 700;
-}
-
-.header-booking:hover {
-    background: #ccc;
-}
-
-.header-right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.header-right img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    display: block;
-}
-
-/* Background */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(6px) brightness(0.4);
-    z-index: -1;
-}
-
-/* Main content overlay */
-.overlay {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 140px 20px 60px;
-    text-align: center;
-    position: relative;
-}
-
-.tagline {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.bio-text {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-/* Socials bottom section */
-.socials {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 60px;
-    align-items: center;
-}
-
-.socials img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    display: block;
-    transition: 0.3s ease;
-}
-
-.socials a:hover img {
-    transform: scale(1.1);
-}
-
-@media (max-width: 900px) {
+    /* Sticky Header */
     .top-header {
-        flex-direction: column;
-        gap: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(6px);
+        padding: 12px 20px;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
+
+    .header-left {
+        flex: 0 0 auto;
+    }
+
     .header-logo {
-        height: 40px;
+        height: 50px;
     }
-}
+
+    .header-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        flex: 1;
+        flex-wrap: wrap;
+    }
+
+    .header-center a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+    }
+
+    .header-center a:hover {
+        border-color: white;
+    }
+
+    .header-booking {
+        background: white;
+        color: black !important;
+        font-weight: 700;
+    }
+
+    .header-booking:hover {
+        background: #ccc;
+    }
+
+    /* HEADER SOCIAL ICONS FIX */
+    .header-right {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .header-right img {
+        background: transparent !important;
+        display: block;
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+    }
+
+    /* Background */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(6px) brightness(0.4);
+        z-index: -1;
+    }
+
+    /* Main content overlay */
+    .overlay {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 120px 20px 60px;
+        text-align: center;
+        position: relative;
+    }
+
+    .main-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    /* Bigger tagline */
+    .tagline {
+        font-size: 48px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+
+    .bio-text {
+        width: 80%;
+        max-width: 1000px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    /* Social media icons bottom section */
+    .socials {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 60px;
+        align-items: center;
+    }
+
+    .socials img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+        transition: 0.3s ease;
+    }
+
+    .socials a:hover img {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 900px) {
+        .top-header {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .header-logo {
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .tagline { font-size: 32px; }
+        .bio-text { font-size: 14px; }
+    }
 </style>
 </head>
 
@@ -176,6 +198,7 @@ body {
         <a href="index.html">Home</a>
         <a href="music.html">Music</a>
         <a class="header-booking" href="booking.html">Booking</a>
+        
     </div>
 
     <div class="header-right">
@@ -196,7 +219,6 @@ body {
 
 <div class="background"></div>
 
-<!-- Main overlay content -->
 <div class="overlay">
 
     <div class="tagline">SPOTIFY PLAYLIST!</div>
@@ -205,10 +227,10 @@ body {
         <p>Radera brings a mixture of Hardstyle, rawstyle, Frenchcore & Uptempo!</p>
     </div>
 
-    <div style="max-width: 600px; margin: 0 auto 40px;">
+    <div style="max-width: 600px; margin: 0 auto 20px;">
         <iframe style="border-radius:12px"
             src="https://open.spotify.com/embed/playlist/7iwQdWc0OmE43tEJOBHQKe?utm_source=generator"
-            width="100%" height="352" frameborder="0"
+            width="100%" height="352" frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy">
         </iframe>
